@@ -11,9 +11,9 @@ probe end
 }
 
 probe kprocess.exec {
-	# printf("filename = %s\n", filename);
-	if (isinstr(filename, "cpptools")) {
-		printf("cpptools detected\n");
-		raise(%{ SIGSTOP %});
-	}
+    # printf("filename = %s\n", filename);
+    if (isinstr(filename, "cpptools")) {
+        printf("cpptools detected\n");
+        raise(%{ SIGSTOP %});
+    }
 }
