@@ -1,0 +1,19 @@
+#!/usr/bin/env stap -vg
+
+probe begin
+{
+    printf("starting\n");
+}
+
+probe end
+{
+    printf("shutting down\n");
+}
+
+probe kprocess.exec {
+	# printf("filename = %s\n", filename);
+	if (isinstr(filename, "cpptools")) {
+		printf("cpptools detected\n");
+		raise(%{ SIGSTOP %});
+	}
+}
