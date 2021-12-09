@@ -1,6 +1,6 @@
 # cpptools KILLER
 
-Ever tried to open a Linux kernel source directory on a shared workstation using Visual Studio Code? If you or one of your colleages have, then you must know how it feels to have a thousand of `cpptools` process eating up all your CPU and memory.
+Ever tried to open a Linux kernel source directory on a shared workstation using Visual Studio Code? If you or one of your colleages have, then you must know how it feels to have a thousand `cpptools` process eating up all your CPU and memory.
 
 With this script, all your troubles are gone! The script not only kills all the `cpptools` processes, but prevent all future `cpptools` processes from spawning as well.
 
